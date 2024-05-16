@@ -1,6 +1,6 @@
 import * as React from 'react'
 import dynamic from 'next/dynamic'
-import Image from "next/legacy/image"
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -20,6 +20,7 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
+import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
@@ -280,7 +281,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         footer={footer}
       />
 
-
+      <GitHubShareButton />
     </>
   )
 }
